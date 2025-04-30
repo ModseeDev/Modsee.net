@@ -17,6 +17,14 @@ body {
     padding-top: 56px; /* For fixed navbar */
 }
 
+/* Brand Text */
+.brand-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -33,17 +41,17 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    z-index: 1; /* Ensure waves are behind content */
+    z-index: 0; /* Lowest z-index to ensure waves are behind all content */
 }
 
 .hero .container {
     position: relative;
-    z-index: 2; /* Place content above waves */
+    z-index: 20; /* Very high z-index to ensure content is definitely above waves */
 }
 
 .hero .btn {
     position: relative;
-    z-index: 3; /* Ensure buttons are above waves */
+    z-index: 20; /* Very high z-index to ensure buttons are definitely above waves */
 }
 
 /* Feature Icons */
@@ -175,4 +183,14 @@ footer a:hover {
 /* Utility Classes */
 .shadow-sm {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 1rem;
+}
+
+.encoded-email {
+    color: var(--primary-color);
+    font-weight: 500;
 } 

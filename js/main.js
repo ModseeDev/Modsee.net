@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    // Apply configuration from config.js
-    applyConfigToUI();
-
+    // Decode and set up email addresses
+    setupEncodedEmails();
+    
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -126,4 +126,41 @@ function applyConfigToUI() {
     if (document.getElementById('license-link')) {
         document.getElementById('license-link').href = config.project.licenseUrl;
     }
+}
+
+/**
+ * Decode and display encoded email addresses to prevent scraping
+ */
+function setupEncodedEmails() {
+    const encodedEmails = document.querySelectorAll('.encoded-email');
+    
+    encodedEmails.forEach(element => {
+        const name = element.getAttribute('data-name');
+        const domain = element.getAttribute('data-domain');
+        const tld = element.getAttribute('data-tld');
+        
+        if (name && domain && tld) {
+            // Create the email text in a roundabout way to avoid easy scraping
+            const emailAddress = name + String.fromCharCode(64) + domain + '.' + tld;
+            
+            // Display the email address obfuscated but readable for humans
+            element.textContent = name + ' [at] ' + domain + '.' + tld;
+            
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'm' + 'a' + 'i' + 'l' + 't' + 'o' + ':' + emailAddress;
+            });
+            
+            element.addEventListener('mouseover', function() {
+                this.style.cursor = 'pointer';
+                this.style.textDecoration = 'underline';
+            });
+            
+            element.addEventListener('mouseout', function() {
+                this.style.textDecoration = 'none';
+            });
+            
+            element.setAttribute('title', 'Click to email us');
+        }
+    });
 } 

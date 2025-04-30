@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Config JS (load first) -->
+    <script src="js/config.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -39,7 +41,12 @@
                         <a class="nav-link" href="#contribute">Contribute</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary ms-2" href="https://github.com/modsee/modsee" target="_blank">
+                        <a class="nav-link" id="docs-link" href="#" target="_blank">
+                            <i class="fas fa-book me-1"></i>Documentation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" id="github-btn" href="#" target="_blank">
                             <i class="fab fa-github me-2"></i>GitHub
                         </a>
                     </li>
@@ -53,11 +60,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto">
-                    <h1 class="display-4 fw-bold mb-3">Modsee</h1>
-                    <p class="lead mb-4">An open-source graphical modeling platform designed to simplify the development of finite element models for OpenSees and OpenSeesPy users.</p>
+                    <h1 class="display-4 fw-bold mb-3" id="hero-title">Modsee</h1>
+                    <p class="lead mb-4" id="hero-description">An open-source graphical modeling platform designed to simplify the development of finite element models for OpenSees and OpenSeesPy users.</p>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                         <a href="#getting-started" class="btn btn-light btn-lg px-4">Get Started</a>
-                        <a href="https://github.com/modsee/modsee" target="_blank" class="btn btn-outline-light btn-lg px-4">
+                        <a href="#" id="github-hero-btn" target="_blank" class="btn btn-outline-light btn-lg px-4">
                             <i class="fab fa-github me-2"></i>View on GitHub
                         </a>
                     </div>
@@ -218,7 +225,7 @@
                                 <div class="mb-3">
                                     <h5 class="h6">1. Clone the repository:</h5>
                                     <div class="code-block">
-                                        <pre><code>git clone https://github.com/modsee/modsee.git
+                                        <pre><code id="clone-command">git clone https://github.com/modsee/modsee.git
 cd modsee</code></pre>
                                     </div>
                                 </div>
@@ -336,7 +343,7 @@ modsee</code></pre>
                         <p class="lead">Join us in building Modsee</p>
                         <p>Contributions, ideas, and discussions are welcome! Once the base structure is finalized, clear guidelines for contributing (issues, pull requests, coding standards) will be published.</p>
                         <p>If you are interested in early contributions or testing, feel free to open an issue or contact us.</p>
-                        <a href="https://github.com/modsee/modsee" class="btn btn-primary mt-3">
+                        <a href="#" id="github-repo-btn" class="btn btn-primary mt-3">
                             <i class="fab fa-github me-2"></i>GitHub Repository
                         </a>
                     </div>
@@ -378,9 +385,9 @@ modsee</code></pre>
             <div class="container">
                 <div class="text-center">
                     <h2 class="display-5 fw-bold">License</h2>
-                    <p class="lead mb-4">This project is licensed under the GNU General Public License v3.0</p>
+                    <p class="lead mb-4" id="license-text">This project is licensed under the GNU General Public License v3.0</p>
                     <p>You are free to use, modify, and distribute Modsee under the terms of the GPLv3.</p>
-                    <a href="https://www.gnu.org/licenses/gpl-3.0.txt" class="btn btn-outline-primary mt-2" target="_blank">
+                    <a href="#" id="license-link" class="btn btn-outline-primary mt-2" target="_blank">
                         View Full License Text
                     </a>
                 </div>
@@ -401,13 +408,18 @@ modsee</code></pre>
                     <h5>Stay Updated</h5>
                     <ul class="list-inline">
                         <li class="list-group-item">
-                            <a href="https://github.com/modsee/modsee" class="text-white">
+                            <a href="#" id="github-star-link" class="text-white">
                                 <i class="fab fa-github me-2"></i>Star on GitHub
                             </a>
                         </li>
                         <li class="list-group-item">
-                            <a href="https://modsee.net" class="text-white">
+                            <a href="#" id="website-link" class="text-white">
                                 <i class="fas fa-globe me-2"></i>modsee.net
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" id="docs-footer-link" class="text-white">
+                                <i class="fas fa-book me-2"></i>Documentation
                             </a>
                         </li>
                     </ul>

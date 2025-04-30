@@ -20,9 +20,10 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    padding: 8rem 0 10rem;
+    padding: 8rem 0;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     overflow: hidden;
+    margin-bottom: 5rem; /* Add space below hero section */
 }
 
 .hero-waves {
@@ -32,6 +33,17 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 1; /* Ensure waves are behind content */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2; /* Place content above waves */
+}
+
+.hero .btn {
+    position: relative;
+    z-index: 3; /* Ensure buttons are above waves */
 }
 
 /* Feature Icons */
@@ -134,10 +146,17 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Navbar active state */
+.navbar-nav .nav-link.active {
+    color: white;
+    font-weight: 500;
+}
+
 /* Media Queries */
 @media (max-width: 767.98px) {
     .hero {
-        padding: 6rem 0 8rem;
+        padding: 6rem 0;
+        margin-bottom: 3rem;
     }
     
     .status-timeline::before {

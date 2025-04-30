@@ -1,6 +1,9 @@
 // Set current year in footer
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Apply configuration from config.js
+    applyConfigToUI();
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -55,4 +58,72 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     window.addEventListener('scroll', highlightNavLink);
-}); 
+});
+
+/**
+ * Apply configuration settings from config.js to the UI elements
+ */
+function applyConfigToUI() {
+    // Make sure the config is loaded
+    if (!window.websiteConfig) {
+        console.error('Website configuration not found. Make sure config.js is loaded before main.js');
+        return;
+    }
+    
+    const config = window.websiteConfig;
+    
+    // Set project info
+    if (document.getElementById('hero-title')) {
+        document.getElementById('hero-title').textContent = config.project.name;
+    }
+    
+    if (document.getElementById('hero-description')) {
+        document.getElementById('hero-description').textContent = config.project.description;
+    }
+    
+    if (document.getElementById('license-text')) {
+        document.getElementById('license-text').textContent = `This project is licensed under the ${config.project.license}`;
+    }
+    
+    // Set all GitHub links
+    const githubLinks = [
+        'github-btn',
+        'github-hero-btn',
+        'github-repo-btn',
+        'github-star-link'
+    ];
+    
+    githubLinks.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.href = config.links.github;
+        }
+    });
+    
+    // Set clone command
+    if (document.getElementById('clone-command')) {
+        document.getElementById('clone-command').textContent = 
+            `git clone ${config.links.github}.git\ncd modsee`;
+    }
+    
+    // Set documentation links
+    const docLinks = ['docs-link', 'docs-footer-link'];
+    docLinks.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.href = config.links.documentation;
+        }
+    });
+    
+    // Set website link
+    if (document.getElementById('website-link')) {
+        const element = document.getElementById('website-link');
+        element.href = config.links.website;
+        element.textContent = new URL(config.links.website).hostname;
+    }
+    
+    // Set license link
+    if (document.getElementById('license-link')) {
+        document.getElementById('license-link').href = config.project.licenseUrl;
+    }
+} 

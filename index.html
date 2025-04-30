@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modsee - Open Source Graphical Modeling Platform for OpenSees</title>
+    <meta name="description" content="Modsee is an open-source graphical modeling platform for OpenSees and OpenSeesPy users.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/modsee-logo.svg" alt="Modsee Logo" height="30" class="d-inline-block align-top me-2">
+                Modsee
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#getting-started">Getting Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#structure">Structure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contribute">Contribute</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="https://github.com/modsee/modsee" target="_blank">
+                            <i class="fab fa-github me-2"></i>GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 fw-bold mb-3">Modsee</h1>
+                    <p class="lead mb-4">An open-source graphical modeling platform designed to simplify the development of finite element models for OpenSees and OpenSeesPy users.</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a href="#getting-started" class="btn btn-light btn-lg px-4">Get Started</a>
+                        <a href="https://github.com/modsee/modsee" target="_blank" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fab fa-github me-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,197.3C960,213,1056,203,1152,181.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Features Section -->
+        <section id="features" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Features</h2>
+                    <p class="lead">Designed with simplicity and power in mind</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="feature-icon bg-primary text-white mb-3">
+                                    <i class="fas fa-drafting-compass"></i>
+                                </div>
+                                <h3 class="h5 card-title">Graphical Model Builder</h3>
+                                <p class="card-text">Intuitive interface for creating nodes, elements, materials, and boundary conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="feature-icon bg-primary text-white mb-3">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                                <h3 class="h5 card-title">Element Support</h3>
+                                <p class="card-text">Comprehensive support for core OpenSees element types in 2D, 3D, springs, and soils.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="feature-icon bg-primary text-white mb-3">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3 class="h5 card-title">Material Library</h3>
+                                <p class="card-text">Extensive material library management for all your modeling needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="feature-icon bg-primary text-white mb-3">
+                                    <i class="fas fa-file-export"></i>
+                                </div>
+                                <h3 class="h5 card-title">Export Capabilities</h3>
+                                <p class="card-text">Export models to both OpenSees TCL scripts and OpenSeesPy scripts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="feature-icon bg-primary text-white mb-3">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <h3 class="h5 card-title">Integrated Runner</h3>
+                                <p class="card-text">Run your models directly with the integrated OpenSeesPy runner.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="feature-icon bg-primary text-white mb-3">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="h5 card-title">Visualization</h3>
+                                <p class="card-text">Advanced model visualization with VTK or similar tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Status Section -->
+        <section id="status" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold">Current Status</h2>
+                        <p class="lead">Modsee is in early development</p>
+                        <p>Initial architecture focuses on building a modular, extensible, and scalable foundation to support long-term growth.</p>
+                        <p>Stay tuned for early alpha releases and development milestones!</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="status-timeline">
+                            <div class="status-item active">
+                                <div class="status-dot"></div>
+                                <div class="status-content">
+                                    <h4>Architecture Design</h4>
+                                    <p>Establishing core patterns and structures</p>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-dot"></div>
+                                <div class="status-content">
+                                    <h4>Alpha Release</h4>
+                                    <p>First functional prototype</p>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-dot"></div>
+                                <div class="status-content">
+                                    <h4>Beta Release</h4>
+                                    <p>Feature complete with testing</p>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-dot"></div>
+                                <div class="status-content">
+                                    <h4>Stable Release</h4>
+                                    <p>Production-ready version</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section id="getting-started" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Getting Started</h2>
+                    <p class="lead">Follow these steps to get Modsee running on your system</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h3 class="h4 mb-3">Prerequisites</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Python 3.7 or higher</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>pip (Python package installer)</li>
+                                </ul>
+                                
+                                <h3 class="h4 mb-3 mt-4">Installation</h3>
+                                <div class="mb-3">
+                                    <h5 class="h6">1. Clone the repository:</h5>
+                                    <div class="code-block">
+                                        <pre><code>git clone https://github.com/modsee/modsee.git
+cd modsee</code></pre>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h5 class="h6">2. Install required dependencies:</h5>
+                                    <div class="code-block">
+                                        <pre><code>pip install -r requirements.txt</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <h5 class="h6">3. For development, install development dependencies:</h5>
+                                    <div class="code-block">
+                                        <pre><code>pip install -e ".[dev]"</code></pre>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h5 class="h6">4. To use OpenSeesPy integration:</h5>
+                                    <div class="code-block">
+                                        <pre><code>pip install -e ".[openseespy]"</code></pre>
+                                    </div>
+                                </div>
+                                
+                                <h3 class="h4 mb-3 mt-4">Running the Application</h3>
+                                <div class="mb-3">
+                                    <h5 class="h6">Using the runner script:</h5>
+                                    <div class="code-block">
+                                        <pre><code>python run.py</code></pre>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h5 class="h6">Or using the console script:</h5>
+                                    <div class="code-block">
+                                        <pre><code>pip install -e .
+modsee</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Structure Section -->
+        <section id="structure" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Project Structure</h2>
+                    <p class="lead">A well-organized architecture designed for extensibility</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="structure-tree">
+                                    <pre><code>Modsee/
+├── src/                    # Source code
+│   ├── main.py             # Application entry point
+│   ├── app.py              # Main application class
+│   ├── config.py           # Configuration management
+│   ├── ui/                 # UI components
+│   │   ├── main_window.py  # Main application window
+│   │   ├── dialogs/        # Popup dialogs
+│   │   ├── widgets/        # Custom widgets
+│   │   └── style/          # UI themes and styling
+│   ├── models/             # Data models
+│   │   ├── project.py      # Project data structure
+│   │   ├── geometry/       # Geometry definitions
+│   │   ├── materials/      # Material definitions
+│   │   ├── elements/       # Element definitions
+│   │   ├── mesh/           # Meshing algorithms
+│   │   └── analysis/       # Analysis settings
+│   ├── io/                 # Input/Output operations
+│   │   ├── project_io.py   # Project save/load
+│   │   ├── opensees_exporter.py    # OpenSees TCL export
+│   │   └── openseespy_exporter.py  # OpenSeesPy export
+│   ├── visualization/      # Visualization components
+│   │   ├── scene.py        # 3D scene management
+│   │   └── renderer.py     # Rendering engine
+│   └── utils/              # Utility functions
+│       └── helpers.py      # Common helper functions
+├── resources/              # Static resources
+│   ├── icons/              # UI icons
+│   ├── materials/          # Material databases
+│   └── templates/          # Export templates
+├── tests/                  # Automated tests
+│   └── test_project.py     # Project model tests
+├── docs/                   # Documentation
+├── examples/               # Example projects
+├── requirements.txt        # Python dependencies
+├── setup.py                # Installation script
+├── run.py                  # Development runner script
+├── README.md
+└── LICENSE</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contribute Section -->
+        <section id="contribute" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold">Contribute</h2>
+                        <p class="lead">Join us in building Modsee</p>
+                        <p>Contributions, ideas, and discussions are welcome! Once the base structure is finalized, clear guidelines for contributing (issues, pull requests, coding standards) will be published.</p>
+                        <p>If you are interested in early contributions or testing, feel free to open an issue or contact us.</p>
+                        <a href="https://github.com/modsee/modsee" class="btn btn-primary mt-3">
+                            <i class="fab fa-github me-2"></i>GitHub Repository
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h4 mb-3">How to Contribute</h3>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0">
+                                        <i class="fas fa-code-branch text-primary me-2"></i>
+                                        <strong>Code Contributions:</strong> Submit pull requests for features or bug fixes
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fas fa-bug text-primary me-2"></i>
+                                        <strong>Bug Reports:</strong> Help identify and report issues
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fas fa-lightbulb text-primary me-2"></i>
+                                        <strong>Feature Requests:</strong> Suggest new features and improvements
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fas fa-book text-primary me-2"></i>
+                                        <strong>Documentation:</strong> Help improve and extend documentation
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fas fa-vial text-primary me-2"></i>
+                                        <strong>Testing:</strong> Participate in testing and quality assurance
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- License Section -->
+        <section id="license" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="display-5 fw-bold">License</h2>
+                    <p class="lead mb-4">This project is licensed under the GNU General Public License v3.0</p>
+                    <p>You are free to use, modify, and distribute Modsee under the terms of the GPLv3.</p>
+                    <a href="https://www.gnu.org/licenses/gpl-3.0.txt" class="btn btn-outline-primary mt-2" target="_blank">
+                        View Full License Text
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Modsee</h5>
+                    <p>An open-source graphical modeling platform for OpenSees</p>
+                    <p>Built with passion for open-source engineering modeling.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Stay Updated</h5>
+                    <ul class="list-inline">
+                        <li class="list-group-item">
+                            <a href="https://github.com/modsee/modsee" class="text-white">
+                                <i class="fab fa-github me-2"></i>Star on GitHub
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://modsee.net" class="text-white">
+                                <i class="fas fa-globe me-2"></i>modsee.net
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; <span id="current-year"></span> Modsee. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

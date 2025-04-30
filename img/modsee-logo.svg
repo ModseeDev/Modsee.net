@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <style>
+    .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
+    .primary { fill: #2563eb; }
+    .secondary { fill: #f59e0b; }
+  </style>
+  <g transform="translate(5,5)">
+    <!-- M letter -->
+    <path class="primary" d="M0,30 L0,0 L5,0 L10,10 L15,0 L20,0 L20,30 L15,30 L15,10 L10,20 L5,10 L5,30 Z" />
+    
+    <!-- Structure grid icon -->
+    <g transform="translate(30, 5)">
+      <rect class="primary" x="0" y="0" width="20" height="20" rx="2" fill-opacity="0.1" />
+      <circle class="primary" cx="5" cy="5" r="2" />
+      <circle class="secondary" cx="15" cy="5" r="2" />
+      <circle class="secondary" cx="5" cy="15" r="2" />
+      <circle class="primary" cx="15" cy="15" r="2" />
+      <line x1="5" y1="5" x2="15" y2="5" stroke="#2563eb" stroke-width="1" />
+      <line x1="15" y1="5" x2="15" y2="15" stroke="#2563eb" stroke-width="1" />
+      <line x1="15" y1="15" x2="5" y2="15" stroke="#2563eb" stroke-width="1" />
+      <line x1="5" y1="15" x2="5" y2="5" stroke="#2563eb" stroke-width="1" />
+      <line x1="5" y1="5" x2="15" y2="15" stroke="#2563eb" stroke-width="1" />
+    </g>
+    
+    <!-- Text -->
+    <text class="logo-text primary" x="60" y="18" font-size="16">odsee</text>
+  </g>
+</svg> 

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-05-01T15:10:00",
+  "channels": {
+    "stable": {
+      "latest_version": "0.0.1",
+      "download_url": "https://example.com/modsee/releases/0.0.1/modsee.zip",
+      "release_notes": [
+        "Initial stable release with version control check"
+      ],
+      "critical_update": false
+    },
+    "beta": {
+      "latest_version": "0.1.0-beta",
+      "download_url": "https://example.com/modsee/releases/0.1.0-beta/modsee.zip",
+      "release_notes": [
+        "Experimental UI changes",
+        "Support for new elements"
+      ],
+      "critical_update": false
+    },
+    "dev": {
+      "latest_version": "0.2.0-dev",
+      "download_url": "https://example.com/modsee/releases/0.2.0-dev/modsee.zip",
+      "release_notes": [
+        "In-progress refactoring",
+        "Plugin system draft implementation"
+      ],
+      "critical_update": true
+    }
+  }
+}

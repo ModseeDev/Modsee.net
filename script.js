@@ -96,12 +96,18 @@ function detectPlatform() {
         platform.value = 'linux';
     }
     
-    // Detect architecture (basic detection)
-    if (userAgent.indexOf('arm') !== -1 || userAgent.indexOf('aarch64') !== -1) {
+    // Detect architecture (improved detection)
+    // Note: Browser API limitations mean this is still basic detection
+    if (userAgent.indexOf('arm') !== -1 || 
+        userAgent.indexOf('aarch64') !== -1 || 
+        (userAgent.indexOf('mac') !== -1 && /iPhone|iPad|iPod/.test(navigator.platform))) {
         architecture.value = 'arm';
     } else {
-        architecture.value = 'intel';
+        architecture.value = 'intel'; // Default to intel for most devices
     }
+    
+    // Log for debugging
+    console.log(`Detected platform: ${platform.value}, architecture: ${architecture.value}`);
 }
 
 // Set up event listeners
@@ -181,14 +187,17 @@ function updateVersionInfo() {
     const downloadButton = document.getElementById('download-button');
     const downloadUrl = getCurrentDownloadUrl();
     
+    // Check if URL is empty, null, or undefined
     if (!downloadUrl || downloadUrl.trim() === '') {
         downloadButton.disabled = true;
         downloadButton.classList.add('btn-secondary');
         downloadButton.classList.remove('btn-primary');
+        downloadDetails.textContent = 'Download not available for this selection';
     } else {
         downloadButton.disabled = false;
         downloadButton.classList.add('btn-primary');
         downloadButton.classList.remove('btn-secondary');
+        downloadDetails.textContent = `${capitalize(channel)} Channel • v${channelData.latest_version}`;
     }
     
     // Update checksum
@@ -216,7 +225,9 @@ function getCurrentDownloadUrl() {
     const architecture = document.getElementById('architecture-select').value;
     
     try {
-        return window.versionData.channels[channel].platforms[platform][architecture].download_url;
+        const url = window.versionData.channels[channel].platforms[platform][architecture].download_url;
+        // Return null for empty strings to simplify handling in updateVersionInfo
+        return url && url.trim() !== '' ? url : null;
     } catch (error) {
         console.error('Error getting download URL:', error);
         return null;

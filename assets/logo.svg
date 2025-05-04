@@ -1,0 +1,14 @@
+<svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .primary { fill: #2563eb; }
+    .accent { fill: #4ade80; }
+    @media (prefers-color-scheme: dark) {
+      .primary { fill: #3b82f6; }
+      .accent { fill: #4ade80; }
+    }
+  </style>
+  <rect width="144" height="144" rx="24" fill="white"/>
+  <path d="M32 40H48L72 100L96 40H112V104H96V64L76 112H68L48 64V104H32V40Z" class="primary"/>
+  <path d="M66 52L56 32H88L78 52H66Z" class="accent"/>
+  <path d="M78 92L88 112H56L66 92H78Z" class="accent"/>
+</svg> 

@@ -1,0 +1,221 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --accent-color: #4ade80;
+  --accent-dark: #16a34a;
+  --text-color: #111827;
+  --text-secondary: #4b5563;
+  --bg-light: #f9fafb;
+  --border-color: #e5e7eb;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --radius: 0.5rem;
+  --footer-bg: #1e293b;
+  --footer-text: #e2e8f0;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+  padding-top: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  padding: 1rem 0;
+}
+
+.navbar-brand span {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--primary-color);
+}
+
+/* Hero section */
+.hero {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
+}
+
+.hero h1 {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.hero .lead {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Feature icons */
+.icon-box {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+}
+
+.icon-box i {
+  font-size: 1.5rem;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+}
+
+.feature-icon i {
+  font-size: 1.25rem;
+}
+
+/* Card styles */
+.card {
+  border-radius: var(--radius);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Downloads section */
+.download-box {
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.download-box:hover {
+  border-color: var(--primary-color);
+}
+
+#checksum-value {
+  display: block;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #f3f4f6;
+  overflow-x: auto;
+  font-size: 0.875rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+.footer h5 {
+  color: white;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer p.text-muted,
+.footer .text-muted {
+  color: #cbd5e1 !important;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer .list-inline-item {
+  margin-right: 1rem;
+}
+
+.footer .list-inline-item a {
+  font-size: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    text-align: center;
+  }
+  
+  .hero .btn-group {
+    justify-content: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+} 

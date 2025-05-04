@@ -3,7 +3,38 @@
   "channels": {
     "stable": {
       "latest_version": "0.0.1",
-      "download_url": "https://example.com/modsee/releases/0.0.1/modsee.zip",
+      "platforms": {
+        "windows": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        },
+        "macos": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        },
+        "linux": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        }
+      },
       "release_notes": [
         "Initial stable release with version control check"
       ],
@@ -11,7 +42,38 @@
     },
     "beta": {
       "latest_version": "0.1.0-beta",
-      "download_url": "https://example.com/modsee/releases/0.1.0-beta/modsee.zip",
+      "platforms": {
+        "windows": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        },
+        "macos": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        },
+        "linux": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        }
+      },
       "release_notes": [
         "Experimental UI changes",
         "Support for new elements"
@@ -20,7 +82,38 @@
     },
     "dev": {
       "latest_version": "0.2.0-dev",
-      "download_url": "https://example.com/modsee/releases/0.2.0-dev/modsee.zip",
+      "platforms": {
+        "windows": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        },
+        "macos": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        },
+        "linux": {
+          "intel": {
+            "download_url": "",
+            "checksum": ""
+          },
+          "arm": {
+            "download_url": "",
+            "checksum": ""
+          }
+        }
+      },
       "release_notes": [
         "In-progress refactoring",
         "Plugin system draft implementation"
